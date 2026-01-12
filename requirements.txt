@@ -15,7 +15,6 @@ chardet==5.2.0
 click==8.1.6
 colorama==0.4.6
 comm==0.2.1
-command-not-found==0.3
 configobj==5.0.8
 contourpy==1.0.7
 coverage==7.4.4
