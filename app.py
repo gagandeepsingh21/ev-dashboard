@@ -9,7 +9,7 @@ from datetime import datetime
 # 1. Configuration & Styling
 # -----------------------------
 st.set_page_config(
-    page_title="EV Intelligence Dashboard",
+    page_title="EV Dashboard",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded"
