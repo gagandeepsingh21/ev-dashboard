@@ -81,7 +81,7 @@ if app_mode == "Overview":
     st.plotly_chart(fig_make, use_container_width=True)
 
 elif app_mode == "Range Predictor":
-    st.title("🔋 Smart Range Predictor")
+    st.title("🔋 Electric Range Predictor")
     st.markdown("Enter vehicle specifications to estimate real-world driving range.")
 
     with st.form("prediction_form"):
@@ -122,14 +122,14 @@ elif app_mode == "Range Predictor":
         res_col1, res_col2 = st.columns([1, 2])
         
         with res_col1:
-            st.success(f"### Predicted Range: \n# {prediction:.1f} Miles")
+            st.success(f"### Predicted ELectric Range: \n# {prediction:.1f} Miles")
 
         with res_col2:
             fig_gauge = go.Figure(go.Indicator(
                 mode = "gauge+number",
                 value = prediction,
                 domain = {'x': [0, 1], 'y': [0, 1]},
-                title = {'text': "Range Capacity (Miles)"},
+                title = {'text': "Electric Range Capacity (Miles)"},
                 gauge = {
                     'axis': {'range': [0, 500]},
                     'bar': {'color': "#00cc96"},
@@ -188,7 +188,7 @@ elif app_mode == "Growth Forecast":
                                          name="Forecast Trend", line=dict(color='red', dash='dash')))
         
         fig_forecast.update_layout(title=f"EV Adoption Trend: {sel_county}", 
-                                  xaxis_title="Year", yaxis_title="Total Registered EVs")
+                                  xaxis_title="Model Year", yaxis_title="Total Registered EVs")
         st.plotly_chart(fig_forecast, use_container_width=True)
 
 # -----------------------------
